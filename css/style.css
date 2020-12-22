@@ -1,0 +1,57 @@
+/* Universal Styles */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    width: 100%;
+    background-image: radial-gradient(circle, white, grey);
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    text-align: center;
+    padding: 2.5px 0px 15px 0px;
+    border-bottom: 1px solid rgb(63, 62, 62);
+}
+
+p {
+    font-size: 22px;
+}
+
+/* Main content styles */
+.wrapper {
+    justify-content: center;
+    width: 66%;
+    height: 60%;
+    margin-top: 20px;
+    border: 1px solid rgb(63, 62, 62);
+    background-color: rgb(218, 216, 216);
+}
+
+.inner-container {
+    border: 1px dotted rgb(63, 62, 62);
+    width: 90%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+.button-row {
+    width: 90%;
+}
+
+.button-container {
+    /* justify-content: center; */
+    text-align: center;
+    /* width: 90%; */
+    border-top: 1px solid rgb(63, 62, 62);
+    padding: 2.5px 0px 15px 0px;
+}
+
+.btn {
+    margin-top: 15px;
+}
