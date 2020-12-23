@@ -20,6 +20,7 @@ h3 {
 
 p {
     font-size: 22px;
+    text-align: center;
 }
 
 /* Main content styles */
@@ -40,14 +41,13 @@ p {
     justify-content: center;
 }
 
+/* Button Styles */
 .button-row {
     width: 90%;
 }
 
 .button-container {
-    /* justify-content: center; */
     text-align: center;
-    /* width: 90%; */
     border-top: 1px solid rgb(63, 62, 62);
     padding: 2.5px 0px 15px 0px;
 }
