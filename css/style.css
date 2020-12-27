@@ -21,6 +21,8 @@ h3 {
 p {
     font-size: 22px;
     text-align: center;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 /* Main content styles */
