@@ -22,7 +22,7 @@ function generatePW() {
     if (pwLength < 8 || pwLength > 128 || pwLength ==! Number) {
         // Then alert try again and return to main screen
         alert("Please try again. Enter a number between 8 and 128");
-        return pwLength;
+        return;
     } else {
         // Else alert the user of the length that they chose
         alert("You chose a password length of " + pwLength + " characters.");
@@ -34,29 +34,33 @@ function generatePW() {
     var confirmNumbers = confirm("Would you like your password to contain numbers? (click OK for yes, or cancel for no)");
     var confirmSymbols = confirm("Would you like your password to contain special characters? (click OK for yes, or cancel for no) The list of accepted special characters includes " + symbols);
 
-    // If user confirms lowercase characters, push lowercase array into array of acceptable characters
+    // If user confirms "_" type of characters, push the given array into array of acceptable characters
     if (confirmLowercase === true) {
-        lowercase.push(...userChoiceArray);
+        userChoiceArray.push(...lowercase);
     }
     if (confirmUppercase === true) {
-        uppercase.push(...userChoiceArray);
+        userChoiceArray.push(...uppercase);
     }
     if (confirmNumbers === true) {
-        numbers.push(...userChoiceArray);
+        userChoiceArray.push(...numbers);
     }
     if (confirmSymbols === true) {
-        symbols.push(...userChoiceArray);
+        userChoiceArray.push(...symbols);
+    }
+    if (confirmLowercase === false && confirmUppercase === false && confirmNumbers === false && confirmSymbols === false) {
+        alert('You must chose at least one of the following: lowercase, uppercase, numbers, or symbols');
+        return;
     }
 
     // Empty string to place user password
     var userPW = "";
-    // function stored in variable to select a random character from the user choice array
-
+    // Loop that continually selects a random character from the userChoiceArray until the password length is reached.
     for (var i = 0; i < pwLength; i++) {
         var randomCharacter = userChoiceArray[Math.floor(Math.random() * userChoiceArray.length)];
+        // Concatentation of the random characters selected into the userPW variable.
         userPW += randomCharacter;
         console.log(userPW);
     }
-
+    // Pushes the generated password into the <p></p> tag of the html 
     newPW.innerHTML = userPW;
 }
