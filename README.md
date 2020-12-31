@@ -6,7 +6,7 @@ For this project, I will be creating a random password generator developed with 
 
 While building this password generation application, I was able to learn a few fundamental tricks that helped me along the way. Of those fundamental tricks, the most important was the use of DOM events, such as the "addEventListener" that was placed on the "generate password" button within the webpage. By placing this DOM event in the language, clicking the "generate password" button linked the click event to a function within my JavaScript code. Once the DOM event was started, I created a framework within the "generatePW()" function that prompts/confirms the user with a sereies of questions that are used to determine what characters and how many characters will be used in the password. These prompts and confirmations were stored within variables and arrays, allowing me to push their answers into empty arrays. The most difficult part of the project was creating a mathematical calculation that would take the characters allowed by the user, and randomly select between those characters for the password. I used a for loop along with Math.floor and Math.random along with the userChoiceArray in order to accomplish this task.
 
-![Finished Website](./css/Images/random-pw-gen-site.png)
+![Finished Website](../css/Images/random-pw-gen-site.png)
 
 ## Credits
 
